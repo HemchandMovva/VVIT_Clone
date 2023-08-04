@@ -1,0 +1,229 @@
+.second_half{
+
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    border-top-style:solid;
+    margin-right:10px;
+    border-top-width:15px;
+    border-top-color:#f0806c;
+    
+}
+
+.campus_news, .examcell, .placement_info{
+    width:50%;
+    padding:5px;
+}
+
+.calender_head{
+    display:flex;
+    flex-direction:row;
+    color:#4c4c4c;
+    font-family:Roboto,Helvetica, sans-serif;
+    font-size:15px;
+    font-weight:lighter;
+    letter-spacing: 2px;
+}
+
+.icon{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.campus_news , .examcell, .placement_info{
+    display:flex;
+    flex-direction: column; 
+}
+
+.img{
+    display:flex;
+    flex-direction:column;
+    padding:5px;
+    margin:0;
+    width:20%;
+    height:50%;
+    float:left;
+}
+
+.mnth{
+    background-color: #ca6959;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    color:white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:1em;
+}
+.date{
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:70px;
+    font-size:1.5em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.content{
+    text-align:justify;
+    padding:5px;
+    width:80%;   
+}
+
+.content a{
+    text-decoration:none;
+    color:black;
+    font-family:Helvetica, sans-serif
+}
+
+.content a:hover{
+    text-decoration-line:underline;
+}
+
+.jul_12, .jul_11, .jul_06, .jul_04, .jul_03, .exam_freshers_r20, .exam_july_13, .exam_july_15, .exam_june_07, .exam_june_05, .exam_may_23, .place_june_14, .place_may_17, .place_may_15, .place_may_02, .place_apr_25{
+    display:flex;
+    padding:5px;
+}
+
+.final_left{
+    display:grid;
+    grid-template-columns: auto auto;
+    width:50%;
+}
+
+.otot, .zo{
+    text-align:center;
+}
+
+.zo, .otot{
+    width:80%;
+    margin-left:10%;
+    color:#7a746a;
+}
+
+.sister, .sisters{
+    position:relative;
+    display:flex;
+}
+
+.plus, .plus1{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(192,114,101,0.7);
+    left:0%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index:1;
+    color:white;
+    
+}
+
+.plus_border, .plus1_border{
+    border-radius:50%; 
+    border:3px solid white;
+    padding:5px;
+
+}
+
+.sister_hide{
+  display:none;
+}
+
+.sisters_hide{
+    display:none;
+}
+
+.final{
+    display:flex;
+    flex-direction:row;
+    background-color:#f8f8f8;
+}
+
+.stories_of_success{
+    width:50%;
+    
+}
+
+.link{
+    display:grid;
+    grid-template-columns: auto auto;
+    width:50%;
+}
+
+.you_are_here{
+    padding:20px;
+    background-color:#f0806c;
+    color:white;
+    margin-top:4px;
+    position:relative;
+    display:flex;
+    width:15%;
+    padding-left:10%;
+}
+
+.edge{
+    border-top:30px solid white;
+    border-left:30px solid #f0806c;
+    border-bottom:30px solid white;
+    position:absolute;
+    left:100%;
+    top:-1%;
+}
+
+.footer{
+    background-color:#CA6959;
+    margin-top:0%;
+    padding:0px;
+
+}
+
+.footer div{
+    padding-bottom:1%;
+    margin:0;
+    line-height: 1%;
+}
+
+.address, .phone, .mail{
+    display:flex;
+    margin:0;
+    padding:0;
+} 
+
+.loc, .num, .principal_mail{
+    padding-top:0%; 
+}
+
+.loc, .principal_mail{
+    font-family:Helvetica, sans-serif;
+    padding:0px;
+    margin:0px;
+    color:rgba(255,255,255,0.5);
+}
+
+.num, .Copyright{
+    font-family:Helvetica, sans-serif;
+    color:rgba(255,255,255,0.5);
+}
+
+.foot_icon{
+    padding:1.5%;
+    color:white;
+}
+
+.loc{
+    font-size:20px;
+}
+.principal_mail{
+    font-size:25px;
+}
+
+.Copyright{
+    text-align:right;
+}

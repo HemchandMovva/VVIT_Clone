@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            border:2px solid red;
+            display:flex;
+            align-content:space-between;
+            position:relative;
+        }
+
+        .left{
+            border: 5px solid green;
+            width:30%;
+            height:20px;
+        }
+
+        .right{
+            border: 5px solid green;
+            width:70%;
+            height:100px;
+            display:none;
+            position:absolute;
+            left:30%;
+        }
+
+        .container:hover .right{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left">
+            Left
+        </div>
+
+        <div class="right">
+            Right
+        </div>
+    </div>
+
+    <div class="sec" style="display:flex;">
+        <div class="img" style="float:left ; border:2px solid red; height:30px;">
+            hg
+        </div>
+        <div class="content" style="width:30px;">
+            Classwork for III B.Tech students commence from 12.07.23 (Wednes Day)
+        </div>
+    </div>
+    
+</body>
+</html>

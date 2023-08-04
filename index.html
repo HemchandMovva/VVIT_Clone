@@ -1,0 +1,1551 @@
+<html>
+    <head>
+
+        <meta charset="UTF-8" name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- For jQuery access-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">  </script>
+
+        <!-- Google Fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asul,Sofia,Roboto">
+
+        <!-- Second half styling-->
+        <link rel="stylesheet" href="second_half_style.css">
+       
+        <style>
+
+           .first{
+            display:flex;
+
+           }
+
+           .f_left{
+            width:50%;
+            display:flex;
+            justify-content:flex-start;
+
+            color:white;
+            padding-right:15px;
+
+           }
+
+           .f_right{
+            width:50%;
+            display:flex;
+            justify-content:end;
+            align-items:center;
+
+            color:white;
+
+           }
+
+           .first_font{
+            padding:10px;
+            font-family:sans-Serif, Verdana, Geneva, Tahoma, sans-serif;
+
+           }
+
+           .pay{
+            background-color:#f0806c;
+
+           }
+          
+           .img_payment{
+            display:flex;
+            justify-content:left;
+             
+           }
+           
+           .second{
+            display:flex;
+            align-items:flex-end;
+
+           }
+
+          
+          .drop{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:5px;
+
+          }
+          
+          .s{
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+            padding:2px;
+
+          }
+
+          .vvit_logo{
+            padding-right:8%;
+
+          }
+          .again, .again1, .again3, .again4, .again5, .again6, .again7{
+            display:flex;
+            flex-direction:column;
+            position:relative;
+            padding-right:10px;
+            color:white;
+
+          }
+          .again:hover, .again1:hover, .again3:hover, .again4:hover, .again5:hover, .again6:hover, .again7:hover{
+            background-color:#f0806c;
+            cursor:pointer;
+
+          }
+         
+          .abt_drp, .adm_drp, .camp_drp, .exam_drp{
+            position:absolute;
+            top:100%;
+            width:300%;
+            font-size:21px;
+            padding:7px;
+            margin:0px;
+            font-family:Helvetica, sans-serif, serif, Verdana, Geneva, Tahoma, sans-serif;
+            display:none;
+            background-color:#de8a7a;
+
+          }
+     
+          .drp_pad{
+            padding:10px;
+            margin:0px;
+            font-family:Helvetica, sans-serif,serif, Verdana, Geneva, Tahoma;
+          }
+
+          .drp_pad:hover{
+            cursor:pointer;
+          }
+
+          .drp_pad a, .first a{
+            text-decoration:none;
+            color:white;
+
+          }
+
+         
+          .drp_pad:hover{
+            background-color:#7a746a;
+          }
+
+         .big .drp_pad{
+            padding:10px;
+            margin:0px;
+
+         }
+          
+         .camp_drp{
+            position:absolute;
+         }
+        
+         .place_drp{
+           
+            display:grid;
+            grid-template-columns:auto auto;
+            font-family:Helvetica, sans-serif,serif, Verdana, Geneva, Tahoma;
+            font-size:21px;
+            background-color:#de8a7a;
+            padding:10px;
+         }
+
+         .again5{
+            position:relative;
+            display:flex;
+            flex-direction:column;
+         }
+
+         .sec_big{
+            position:absolute;
+            display:none;
+            top:100%;
+            right:0%;
+            width:390%;
+         }
+
+         .exam_drp{
+            position:absolute;
+         }
+
+         .faci_drp{
+            display:grid;
+            grid-template-columns:auto auto auto;
+            padding:10px;
+            font-size:21px;
+         }
+         
+         .third_big{
+            position:absolute;
+            right:0%;
+            top:100%;
+            font-family: Helvetica, sans-serif;
+            width:650%;
+            background-color:#de8a7a;
+            display:none;
+            
+         }
+
+         .third{
+            display:flex;
+
+            padding-left:10%;
+            justify-content:right;
+            padding-top:6%;
+         }
+         .abs{
+            text-align:right;
+            color:white;
+            width:40%;
+
+            padding-top:1%;
+            padding-right:4%;
+            padding-left:2%;
+         }
+
+         .abs h1{
+            background-color:rgba(255,255,255,0.5);
+            text-align:center;
+            font-size:49px;
+            font-weight:60px;
+            display:none;
+         }
+
+         .committees, .statuatory_committees{
+            display:flex;
+            flex-direction:row;
+
+            position:relative;
+            width:200%;
+         }
+
+         .committees_left , .statuatory_committees_left{
+            width:49.5%;
+
+         }
+         .committees_right, .statuatory_committees_right{
+            position:absolute;
+            width:50%;
+            left:50%;
+            background-color:#f0806c;
+            padding:7px;
+            display:none;
+           
+         }
+
+         .governing_body , .board_of_studies{
+            position:relative;
+            display:flex;
+         }
+         .governing_body_left{
+            position:absolute;
+            right:100%;
+            width:100%;
+            background-color:#f0806c;
+            padding:7px;
+            display:none;
+            top:-50px;
+        
+         }
+         .governing_body_right, .board_of_studies_right{
+            width:100%;
+         }
+
+         
+         .board_of_studies_left_container{
+            position:absolute;
+            right:100%;
+            width:150%;
+            top:-200%;
+            background-color: #f0806c;
+        
+            display:none;
+        
+         }
+
+         .board_of_studies_left{
+            display:flex;
+            flex-wrap:wrap;
+            padding:7px;
+         }  
+
+         .board_of_studies_left h6{
+            width:45%;
+            
+         }
+
+         .cse_aiml, .r20_cse_aiml, .aids, .bos_minutes, .aiml , .cse_iot, .s_and_h, .r_and_d, .sac , .discipline, .clubs, .ncc, .nss, .sports, .internships, .latest_results, .pre_questions, .R19_pre_questions, .i_and_edc, .mhrd_iic, .startup_policy, .uni_innovation_fellows{
+
+            position:relative;
+            display:flex;
+
+         }
+
+         .cse_aiml_left , .r20_cse_aiml_right, .aids_left, .bos_minutes_right, .aiml_left, .cse_iot_left, .s_and_h_right, .r_and_d_right, .sac_left, .discipline_right, .clubs_right, .ncc_left, .nss_left, .sports_left,  .internships_left, .latest_results_right, .pre_questions_right, .R19_pre_questions_right, .i_and_edc_left, .mhrd_iic_right, .startup_policy_left, .uni_innovation_fellows_left{
+            width:100%;
+        
+         }
+
+         .cse_aiml_right{
+
+            position:absolute;
+            width:45%;
+            left:95%;
+            padding:7px;
+            background-color:#ca6959;;
+            display:none;
+            z-index:1;
+         }
+
+
+         .r20_cse_aiml_left{
+            position:absolute;
+            padding:7px;
+            width:150%;
+            right:102%;
+            background-color:#ca6959;;
+            display:none;
+            z-index:1;
+         }
+
+         .again3{
+            position:relative;
+            display:flex;
+            flex-direction: column;
+         }
+
+         .dep_drp{
+            position:absolute;
+            width:500%;
+            background-color:#de8a7a;
+            top:100%;
+            display:none;
+         }
+         .big{
+            display:grid;
+            grid-template-columns:auto auto;
+            font-size:21px;
+            padding:7px;
+         }
+
+         .aids_right{
+            position:absolute;
+            left:100%;
+            width:45%;
+            padding:7px;
+            background-color:#ca6959;
+            z-index:1;
+            display:none;
+         }
+         .bos_minutes_left , .s_and_h_left, .r_and_d_left, .discipline_left, .clubs_left_container, .latest_results_left, .pre_questions_left, .R19_pre_questions_left, .mhrd_iic_left_container{
+            position:absolute;
+            right:100%;
+            padding:7px;
+            background-color:#ca6959;
+            z-index:1;
+         }
+         .bos_minutes_left{
+            width:50%;
+            display:none;
+            
+         }
+
+         .aiml_right{
+            position:absolute;
+            left: 90%;
+            background-color:#ca6959;
+            width:65%;
+            padding:7px;
+            display:none;
+            z-index:1;
+         }
+
+         .cse_iot_right{
+            position:absolute;
+            left:95%;
+            background-color:#ca6959;
+            padding:7px;
+            width:60%;
+            top:-20%;
+            display:none;
+            z-index:1;
+         }
+         .s_and_h_left{
+           width:150%;
+           display:none;
+           z-index:1
+         }
+
+         .r_and_d_left{
+            width:100%;
+            top:-15%;
+            display:none;
+         }
+
+         .sac_right, .ncc_right, .nss_right, .sports_right, .internships_right, .i_and_edc_right, .startup_policy_right, .uni_innovation_fellows_right{
+            position:absolute;
+            left:100%;
+            background-color:#ca6959;
+            z-index:1;
+            padding:7px;
+         }
+
+         .sac_right{
+            width:75%;
+            display:none
+         }
+
+         .discipline_left{
+            width:70%;
+            top:-5%;
+            display:none;
+         }
+
+         .clubs_left_container{
+            width:200%;
+            display:none;
+         }
+
+         .clubs_left{
+            display:grid;
+            grid-template-columns:auto auto;
+         }
+
+         .ncc_right, .nss_right{
+            width:50%;
+            display:none;
+         }
+
+         .sports_right{
+            width:80%;
+            display:none;
+         }
+         .internships_right{
+            width:70%;
+            display:none;
+            
+         }
+
+         .latest_results_left{
+            width:70%;
+            display:none;
+         }
+
+         .pre_questions_left{
+            width:100%;
+            display:none;;
+         }
+
+         .R19_pre_questions_left{
+            width:110%;
+            display:none;
+         }
+         .i_and_edc_right{
+            width:40%;
+            top:-5%;
+            display:none;
+         }
+         .mhrd_iic_left{
+            display:grid;
+            grid-template-columns:auto auto auto;
+         }
+         .mhrd_iic_left_container{
+            width:600%;
+            display: none;
+         }
+         .startup_policy_right{
+            width:150%;
+            display:none;
+         }
+         .uni_innovation_fellows_right{
+            width:110%;
+            display:none;
+         }
+
+
+         /* Second Half*/
+
+       
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div style="background-image:url('vvit_drone_4k-min.jpeg') ; background-size:cover; height:100%;" >
+
+            <div class="first">
+
+                <div class="f_left">
+                    <h5 class="first_font"> <a href="">NIRF 2023</a></h5>
+                    <h5 class="first_font"> <a href="">IQAC</a></h5>
+                    <h5 class="first_font"> <a href="">Mandatory Disclosure</a></h5>
+                    <h5 class="first_font"> <a href="">Gallery</a></h5>
+                    <h5 class="first_font"> <a href="">ERP Login</a></h5>
+                </div>
+
+                <div class="f_right">
+
+                    <div class="img_payment">
+                        <h5 class="first_font pay"><i class="fa fa-credit-card" aria-hidden="true"></i></h5>
+                        <h5 class="first_font pay"> <a href="">Online Payment</a> </h5>
+                    </div>
+                    
+                    <h5 class="first_font"> <a href="">Login</a> </h5>
+                    <h5 class="arrow"> <i class="fa fa-search" aria-hidden="true" id="first_search" > </i> </h5>
+                    
+
+                </div>
+            </div>
+        
+            <div class="second">
+
+                <div class="s vvit_logo">
+                    <img src="VVIT_Logo.jpeg" alt="LOGO" height="100px" width="120px" >
+                </div>
+
+                
+                <div class="again">
+
+                    <div class="s about">
+
+                        <div class="drop about_drop">
+                            <h4> ABOUT </h4>
+                            <h6> <i class="fa fa-arrow-down" aria-hidden="true"></i> </h6>
+                        </div>
+
+                    </div>
+
+                    <div class="abt_drp">
+                        <h6 class="drp_pad"> <a href="">About Us</a></h6>
+                        <h6 class="drp_pad"> <a href=""> Key persons</a></h6>
+                        <h6 class="drp_pad"> <a href="">Social Educational Trust</a></h6>
+                        <h6 class="drp_pad"> <a href="">Vision & Mission</a></h6>
+                        <h6 class="drp_pad"> <a href="">People</a></h6>
+
+
+                        <div class="committees">
+
+                            <div class="committees_left">
+                                <h6 class="drp_pad"> <a href="">Committees</a></h6>
+                            </div>
+
+                            <div class="committees_right" >
+
+                                <div class="statuatory_committees">
+
+                                    <div class="statuatory_committees_left">
+                                        <h6 class="drp_pad"> <a href=""> Stationary Committees</a></h6>
+                                    </div>
+
+                                    <div class="statuatory_committees_right">
+
+
+                                        <div class="governing_body">
+
+                                            <div class="governing_body_right">
+                                                <h6 class="drp_pad"><a href=""> Governmening Body</a></h6>
+                                            </div>
+                                            
+                                            <div class="governing_body_left">
+                                                <h6 class="drp_pad"> <a href=""> Chairman</a></h6>
+                                                <h6 class="drp_pad"> <a href=""> Secretary</a></h6>
+                                                <h6 class="drp_pad"> <a href=""> Joint Secretary(Academics)</a></h6>
+                                                <h6 class="drp_pad"> <a href=""> Principal</a></h6>
+                                                <h6 class="drp_pad"> <a href=""> Global Ambassador</a></h6>
+                                                <h6 class="drp_pad"> <a href=""> Members of Governing Body</a></h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="board_of_studies">
+
+                                            <div class="board_of_studies_right">
+                                                <h6 class="drp_pad"><a href=""> Board of Studies(BoS)</a></h6>
+                                            </div>
+
+
+                                            <div class="board_of_studies_left_container">
+                                                <div class="board_of_studies_left">
+                                                    <h6 class="drp_pad" > <a href=""> BoS-CSE</a></h6>
+                                                    <h6 class="drp_pad" > <a href=""> BoS-Civil</a></h6>
+                                                    <h6 class="drp_pad" > <a href=""> Bos-ECE</a></h6>
+                                                    <h6 class="drp_pad" > <a href=""> Bos-Mechanical</a></h6>
+                                                    <h6 class="drp_pad" > <a href=""> Bos-IT</a></h6>
+                                                    <h6 class="drp_pad" > <a href=""> Bos-MCA</a></h6>
+                                                    <h6 class="drp_pad" > <a href=""> Bos-EEE</a></h6>
+                                                    <h6 class="drp_pad" > <a href=""> Bos-S&H</a></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <h6 class="drp_pad"><a href=""> Finance Committee</a></h6>
+                                        <h6 class="drp_pad"><a href=""> Academic Council</a></h6>
+                                        
+                                    </div>
+
+                                </div>
+
+
+                                <h6 class="drp_pad"> <a href=""> Non Statutory Committees</a></h6>
+
+                            </div>
+
+                        </div>
+
+                        <h6 class="drp_pad"> <a href="">Achievements & SWOT Analysis</a></h6>
+                        <h6 class="drp_pad"> <a href="">Location</a></h6>
+                        <h6 class="drp_pad"> <a href="">Letter Of Commitment</a></h6>
+                    </div>
+                </div>
+
+                <div class="again1">
+                    <div class="s admissions">
+
+                        <div class="drop admisstions_drop">
+                            <h4> ADMISSIONS </h4>
+                            <h6> <i class="fa fa-arrow-down" aria-hidden="true"></i> </h6>
+
+                        </div>
+
+                    </div>
+                    <div class="adm_drp">
+                        <h6 class="drp_pad"> <a href="">UG Admissions</a></h6>
+                        <h6 class="drp_pad"> <a href="">PG Admissions</a></h6>
+                        <h6 class="drp_pad"> <a href="">Intake & Fee Details</a></h6>
+                        <h6 class="drp_pad"> <a href="">Previous Rank Info</a></h6>
+                    </div>
+                </div>
+
+                <div class="again3">
+
+                    <div class="s departments">
+
+                        <div class="drop departments_drop">
+                            <h4> DEPARTMENTS </h4>
+                            <h6> <i class="fa fa-arrow-down" aria-hidden="true"></i> </h6>
+                        </div>
+                            
+                    </div>
+
+                    <div class="dep_drp">
+                        <div class="big">
+                                <h6 class="drp_pad" > <a href=""> Computer Science & Engineering</a></h6>
+                                <h6 class="drp_pad" > <a href=""> Electrical & Electronics Enginnering</a></h6>
+
+
+                                <div class="cse_aiml">
+                                    <div class="cse_aiml_left">
+                                        <h6 class="drp_pad" > <a href=""> CSE(Artificial Intelligence & Machine Learning)</a></h6>
+                                    </div>
+
+                                    <div class="cse_aiml_right">
+                                        <h6 class="drp_pad"> <a href=""> About-CSE(AI&ML)</a></h6>
+                                        
+                                            <div class="r20_cse_aiml">
+                                                <div class="r20_cse_aiml_right">
+                                                    <h6 class="drp_pad"> <a href=""> R20 CSE(AI&ML)</a></h6>
+                                                </div>
+
+                                                <div class="r20_cse_aiml_left">
+                                                    <h6 class="drp_pad"><a href=""> Course Structure & Sllabus(CSE & AIML)</a></h6>
+                                                    <h6 class="drp_pad"><a href=""> R20 Regulation(CSE AIML)</a></h6>
+                                                </div>
+                                            </div>
+
+                                        <h6 class="drp_pad"> <a href=""> Faculty</a></h6>
+                                    </div>
+                                </div>
+
+                                <h6 class="drp_pad" > <a href=""> Information Technology</a></h6>
+
+                                <div class="aids">
+                                    <div class="aids_left">
+                                        <h6 class="drp_pad" > <a href=""> B.Tech-AI&DS</a></h6>
+                                    </div>
+
+                                    <div class="aids_right">
+                                        <h6 class="drp_pad"> <a href=""> About AI&DS</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> R20-Regulation(Ai&DS)</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Course Structure R20(AI&DS)</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Syllabus R20(AI&DS)</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Faculty</a></h6>
+
+                                        <div class="bos_minutes">
+                                            <div class="bos_minutes_right">
+                                                <h6 class="drp_pad"> <a href=""> BoS Minutes</a></h6>
+                                            </div>
+
+                                            <div class="bos_minutes_left">
+                                                <h6 class="drp_pad"> <a href=""> June 2021</a></h6>
+                                                <h6 class="drp_pad"> <a href=""> July 2020</a></h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <h6 class="drp_pad" > <a href=""> Civil Engineering</a></h6>
+
+                                <div class="aiml">
+                                    <div class="aiml_left">
+                                        <h6 class="drp_pad" > <a href=""> B.Tech-AI&ML</a></h6>
+                                    </div>                               
+
+                                    <div class="aiml_right">
+                                        <h6 class="drp_pad"> <a href=""> About AI&ML</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> R20-Regulation(B.Tech-AI&ML)</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> R20 B.Tech(AI&ML) Course Structure & Syllabus</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Faculty</a></h6>
+                                    </div>
+                                </div>
+
+
+                                <h6 class="drp_pad" > <a href=""> Mechanical Engineering</a></h6>
+
+                                <div class="cse_iot">
+
+                                    <div class="cse_iot_left">
+                                        <h6 class="drp_pad" > <a href=""> CSE(Internet Of Things)</a></h6>
+                                    </div>
+                                    
+                                    <div class="cse_iot_right">
+                                        <h6 class="drp_pad"> <a href=""> About CSE(IoT)</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Vision, Mission, PEOs, POs, PSOs</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Faculty</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Achievements(CSO)</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Board of Studies</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> CSE-IoT Course Structure & Syllabus</a></h6>
+                                    </div>
+
+                                </div>
+
+                                <div class="s_and_h">
+                                    <div class="s_and_h_right">
+                                        <h6 class="drp_pad" > <a href=""> Science & Humanities</a></h6>
+                                    </div>
+
+                                    <div class="s_and_h_left">
+                                        <h6 class="drp_pad"> <a href=""> Department Profile</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Faculty</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> R&D</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Academic Strategies</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Infrastructure and Labs</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Research Papers-Seminars-Workshops-Conferences</a></h6>                                    
+                                    </div>
+                                </div>
+
+                                <h6 class="drp_pad" > <a href=""> CSE(IoT and Cyber Security including Blockchain Technology)</a></h6>
+
+                                <div class="r_and_d">
+                                    <div class="r_and_d_right">
+                                        <h6 class="drp_pad" > <a href=""> R&D</a></h6>
+                                    </div>                            
+
+                                    <div class="r_and_d_left">
+                                        <h6 class="drp_pad"> <a href=""> Patents</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Books Authored</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Seminar Sponsorships</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Research projects</a></h6>
+                                        <h6 class="drp_pad"> <a href=""> Research Centers</a></h6>
+                                    </div>
+                                </div>
+
+                                <h6 class="drp_pad" > <a href=""> Electronics & Communication Engineering</a></h6> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="again4" >
+                    <div class="s campuslife">
+                        <div class="drop campuslife_drop">
+                            <h4> CAMPUSLIFE </h4>
+                            <h6> <i class="fa fa-arrow-down" aria-hidden="true"></i> </h6>
+                        </div>
+                    </div>
+                    <div class="camp_drp" style="width:200%;">
+
+
+                        <div class="sac">
+                            <div class="sac_left">
+                                <h6 class="drp_pad"> <a href=""> SAC</a></h6>
+                            </div>                
+
+                            <div class="sac_right">
+                                <h6 class="drp_pad"> <a href=""> About SAC</a></h6>
+                                <h6 class="drp_pad"> <a href=""> SAC Meetings</a></h6>
+                                <h6 class="drp_pad"> <a href=""> SAC Selections </a></h6>
+                                <h6 class="drp_pad"> <a href=""> SAC CWC</a></h6>
+                                <h6 class="drp_pad"> <a href=""> SAC Activities</a></h6>
+
+                                <div class="discipline">
+                                    <div class="discipline_right">
+                                        <h6 class="drp_pad"> <a href=""> Discipline Council-SAC</a></h6>
+                                    </div>
+                                
+                                    <div class="discipline_left">
+                                        <h6 class="drp_pad"> <a href=""> Discipline Data</a></h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="clubs">
+                            <div class="clubs_right">
+                                <h6 class="drp_pad"> <a href=""> Clubs</a></h6>
+                            </div>
+                            <div class="clubs_left_container">
+                                <div class="clubs_left">
+                                    <h6 class="drp_pad"> <a href=""> Theatre Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Yoga and Meditaion Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Animation and Graphics Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Painting Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Dance Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Martial Arts Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Literary Appreciation Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Sports Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Movie Appreciation Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Robotics Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Music Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Telugu Appreciation Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Chairman's Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Green Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Photography Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Culinary Club</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Political and Social Awareness Club</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ncc">
+                            <div class="ncc_left">
+                                <h6 class="drp_pad"> <a href=""> NCC</a></h6>
+                            </div>
+
+                            <div class="ncc_right">
+                                <h6 class="drp_pad"> <a href=""> NCC Profile</a></h6>
+                                <h6 class="drp_pad"> <a href=""> NCC Activities</a></h6>
+                            </div>
+                        </div>
+
+                        <div class="nss">
+                            <div class="nss_left">
+                                <h6 class="drp_pad"> <a href=""> NSS</a></h6>
+                            </div>
+
+                            <div class="nss_right">
+                                <h6 class="drp_pad"> <a href=""> NSS Profile</a></h6>
+                                <h6 class="drp_pad"> <a href=""> NSS Events</a></h6>
+                            </div>
+                        </div>
+
+                        <div class="sports">
+                            <div class="sports_left">
+                                <h6 class="drp_pad"> <a href=""> Sports</a></h6>
+                            </div>
+                            
+                            <div class="sports_right">
+                                <h6 class="drp_pad"> <a href=""> JNTUK Representations</a></h6>
+                                <h6 class="drp_pad"> <a href=""> Achievements</a></h6>
+                                <h6 class="drp_pad"> <a href=""> Sports Gallery</a></h6>
+                                <h6 class="drp_pad"> <a href=""> Department Profile</a></h6>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+
+                <div class="again5">
+                    <div class="s placements">
+                        <div class="drop placements_drop">
+                            <h4> PLACEMENTS </h4>
+                            <h6> <i class="fa fa-arrow-down" aria-hidden="true"></i> </h6>
+                        </div>
+
+                    </div>
+
+                    <div class="sec_big">
+                        <div class="place_drp">
+                            <h6 class="drp_pad"> <a href=""> Placement profile</a></h6>
+
+                            <div class="internships">
+                                <div class="internships_left">
+                                    <h6 class="drp_pad"> <a href=""> Internships</a></h6>
+                                </div>
+                                
+                                <div class="internships_right">
+                                    <h6 class="drp_pad"> <a href=""> About Internships</a></h6>
+                                    <h6 class="drp_pad"> <a href=""> Internship Team</a></h6>
+                                </div>
+                            </div>
+
+                            <h6 class="drp_pad" > <a href=""> Year wise Placement Summary</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Memorandum of Understanding (MOU)</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Branch-Wise Placements</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Student Verification</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Training & Placement Team</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Placement News</a></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="again6">
+
+                    <div class="s examcelll">
+                        <div class="drop examcell_drop">
+                            <h4> EXAMCELL </h4>
+                            <h6> <i class="fa fa-arrow-down" aria-hidden="true"></i> </h6>
+                        </div>
+
+                    </div>
+
+                    <div class="exam_drp" style="width:200%;">
+                        <h6 class="drp_pad"> <a href=""> Exam Cell Profile</a></h6>
+                        <h6 class="drp_pad"> <a href=""> Exam Cell Staff</a></h6>
+
+                        <div class="latest_results">
+                            <div class="latest_results_right">
+                                <h6 class="drp_pad"> <a href=""> Latest Results</a></h6>
+                            </div>
+
+                            <div class="latest_results_left">
+                                <h6 class="drp_pad"> <a href=""> Autonomous</a></h6>
+                                <h6 class="drp_pad"> <a href=""> JNTUK</a></h6>
+                                <h6 class="drp_pad"> <a href=""> Archive (Old Results) </a></h6>
+                            </div>
+                        </div>
+
+                        <h6 class="drp_pad"> <a href=""> Exam Timetables</a></h6>
+                        <h6 class="drp_pad"> <a href=""> Academic Calender</a></h6>
+                        <h6 class="drp_pad"> <a href=""> Exam</a></h6>
+                        <h6 class="drp_pad"> <a href=""> Application Forms</a></h6>
+
+
+                        <div class="pre_questions">
+                            <div class="pre_questions_right">
+                                <h6 class="drp_pad"> <a href=""> Previous Question Papers</a></h6>
+                            </div>
+                            
+                            <div class="pre_questions_left">
+
+                                <div class="R19_pre_questions">
+                                    <div class="R19_pre_questions_right">
+                                        <h6 class="drp_pad"> <a href=""> R19 Previous Question Papers</a></h6>
+                                    </div>
+                                    
+                                    <div class="R19_pre_questions_left">
+                                        <h6 class="drp_pad"><a href=""> R19 CSE Previous Question Papers</a></h6>
+                                    </div>
+                                </div>
+
+
+                                <h6 class="drp_pad"> <a href=""> R20 Previous Question Papers</a></h6>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="again7">
+                    <div class="s facilities">
+
+                        <div class="drop facilities_drop">
+                            <h4> FACILITIES </h4>
+                            <h6> <i class="fa fa-arrow-down" aria-hidden="true"></i> </h6>
+                        </div>
+
+                    </div>
+                    <div class="third_big">
+                        <div class="faci_drp">
+
+
+                            <div class="i_and_edc">
+                                <div class="i_and_edc_left">
+                                    <h6 class="drp_pad" > <a href=""> I& EDC</a></h6>
+                                </div>                       
+
+                                <div class="i_and_edc_right">
+
+
+                                    <div class="mhrd_iic">
+                                        <div class="mhrd_iic_right">
+                                            <h6 class="drp_pad"><a href=""> MHRD-IIC</a></h6>
+                                        </div>                                 
+                                        
+                                        <div class="mhrd_iic_left_container">
+                                            <div class="mhrd_iic_left">
+
+                                                <div class="startup_policy">
+                                                    <div class="startup_policy_left">
+                                                        <h6 class="drp_pad"><a href=""> Startup Policy</a></h6>
+                                                    </div>                                            
+
+                                                    <div class="startup_policy_right">
+                                                        <h6 class="drp_pad"><a href=""> AP Startup Policy</a></h6>
+                                                        <h6 class="drp_pad"><a href=""> National Startup Policy</a></h6>
+                                                        <h6 class="drp_pad"><a href=""> Ranking</a></h6>
+                                                        <h6 class="drp_pad"><a href=""> VVIT Startup Policy</a></h6>
+                                                        <h6 class="drp_pad"><a href=""> Google Codelabs Summary</a></h6>
+                                                        <h6 class="drp_pad"><a href=""> Siemens COE</a></h6>
+                                                    </div>
+                                                </div>
+
+                                                <h6 class="drp_pad"><a href=""> Enterpreneurship Innovation</a></h6>
+                                                <h6 class="drp_pad"><a href=""> Action Plan</a></h6>
+                                                <h6 class="drp_pad"><a href=""> IIC-Minutes</a></h6>
+                                                <h6 class="drp_pad"><a href=""> My Story-Innovation Life</a></h6>
+                                                <h6 class="drp_pad"><a href=""> ARIIA-2021 Report</a></h6>
+                                                <h6 class="drp_pad"><a href=""> My Story-EP</a></h6>
+                                                <h6 class="drp_pad"><a href=""> World Enterpreneur Day</a></h6>
+                                                <h6 class="drp_pad"><a href=""> Startups</a></h6>
+                                                <h6 class="drp_pad"><a href=""> IIC-Field Visit</a></h6>
+                                                <h6 class="drp_pad"><a href=""> Awareness for Freshers</a></h6>
+                                                <h6 class="drp_pad"><a href=""> IIC-Design Thinking</a></h6>
+                                                <h6 class="drp_pad"><a href=""> ARIIA 2020 Report</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <h6 class="drp_pad" > <a href=""> VVIT TEP-ISB</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Hostels</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Google Code Labs</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Venture Development Center</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Transport</a></h6>
+                            <h6 class="drp_pad" > <a href=""> SIEMENS COE</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Grievance Cell</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Engineers without Borders(EWB)</a></h6>
+
+
+
+                            <div class="uni_innovation_fellows">
+                                <div class="uni_innovation_fellows_left">
+                                    <h6 class="drp_pad" > <a href=""> University Innovation Fellows</a></h6>
+                                </div>
+                                
+                                <div class="uni_innovation_fellows_right">
+                                    <h6 class="drp_pad"><a href=""> UIF D-Challenge</a></h6>
+                                    <h6 class="drp_pad"><a href=""> Regional Meetup (RegMeet ✖ VVIT)</a></h6>
+                                    <h6 class="drp_pad"><a href=""> Stanford about VVIT</a></h6>
+                                </div>
+                            </div>
+
+
+
+                            <h6 class="drp_pad" > <a href=""> Library</a></h6>
+                            <h6 class="drp_pad" > <a href=""> UiPath Academic Alliance Partnership</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Dassault Systems</a></h6>
+                            <h6 class="drp_pad" > <a href=""> Canteen</a></h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br><br>
+            <div class="third">
+                <div class="abs">
+                    <h1> Absolute Discipline</h1>
+                    <h1> Absolute Education</h1>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        <div class="second_half">
+
+            <div class="campus_news">            
+
+                <div class="calender_head">
+                    <div class="icon">
+                        <i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 style="padding-left:5px"> Campus News</h2>
+                    </div>    
+                </div>
+
+                <div class="jul_12">
+
+                    <div class="img">
+                        <div class="mnth"> JUL </div>
+                        <div class="date"> 12</div>
+                    </div>
+                    <div class="content">
+                        <a href="">Members of the SPIC MACAY Heritage Club of VVIT participated in the 8th International Convention held at VNIT, Nagpur.</a>
+                    </div>
+
+                </div>
+
+                <div class="jul_11">
+
+                    <div class="img">
+                        <div class="mnth"> JUL</div>
+                        <div class="date"> 11 </div>
+                    </div>
+                    <div class="content">
+                        <a href="">Classwork for III B.Tech students commence from 12.07.23 (Wednes Day)</a>
+                    </div>
+
+                </div>
+
+                <div class="jul_06">
+
+                    <div class="img">
+                        <div class="mnth">JUL</div>
+                        <div class="date">06</div>
+                    </div>
+                    <div class="content">
+                        <a href="">This Second Saturday (08.07.23) is observed a holiday</a>
+                    </div>
+
+                </div>
+
+                <div class="jul_04">
+
+                    <div class="img">
+                        <div class="mnth">JUL</div>
+                        <div class="date">04</div>
+                    </div>
+                    <div class="content">
+                        <a href="">VVIT is providing a Two Week Hands on Training Program to School teachers on using digital content (Samagra Siksha).</a>
+                    </div>
+
+                </div>
+
+                <div class="jul_03">
+
+                    <div class="img">
+                        <div class="mnth">JUL</div>
+                        <div class="date">03</div>
+                    </div>
+                    <div class="content">
+                        <a href="">An academic monitoring committee is constituted for the benefit of our students. Details displayed in Notice Boards.</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="examcell">   
+
+                <div class="calender_head">
+
+                    <div class="icon" >
+                        <i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i> 
+                    </div>
+                    <div class="">
+                        <h2 style="padding-left:5px"> Exam Cell Updates</h2>
+                    </div>
+                    
+                </div>
+
+                <div class="exam_freshers_r20">
+
+                    <div class="img">
+                        <div class="mnth"> Freshers</div>
+                        <div class="date">R20</div>
+                    </div>
+                    <div class="content">
+                        <a href="">Regulations & Syllabus</a>
+                    </div>
+
+                </div>
+
+                <div class="exam_july_13">
+
+                    <div class="img">
+                        <div class="mnth">July</div>
+                        <div class="date">13</div>
+                    </div>
+                    <div class="content">
+                        <a href="">B.Tech 3-2(R20) Regular Results April 2023 </a>
+                    </div>
+
+                </div>
+
+                <div class="exam_july_15">
+
+                    <div class="img">
+                        <div class="mnth">July</div>
+                        <div class="date">15</div>
+                    </div>
+                    <div class="content">
+                        <a href="">JNTUK B.Tech 4-1 (R16) Advance Supply Results March 2023 & 1-1 (R16) Supply & Challenge valuation Results Feb 2023</a>
+                    </div>
+
+                </div>
+
+                <div class="exam_june_07">
+
+                    <div class="img">
+                        <div class="mnth">June</div>
+                        <div class="date">07</div>
+                    </div>
+                    <div class="content">
+                        <a href="">B.Tech 4-2(R19) Revaluation Results April 2023</a>
+                    </div>
+
+                </div>
+
+                <div class="exam_june_05">
+
+                    <div class="img">
+                        <div class="mnth">June</div>
+                        <div class="date">05</div>
+                    </div>
+                    <div class="content">
+                        <a href="">JNTUK B.Tech 4-2 (R16 & R13) Supply Results April 2023</a>
+                    </div>
+
+                </div>
+
+                <div class="exam_may_23">
+
+                    <div class="img">
+                        <div class="mnth">May</div>
+                        <div class="date">23</div>
+                    </div>
+                    <div class="content">
+                        <a href="">B.Tech 4-2(R19) Regular Results April 2023</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="placement_info">
+
+                <div class="calender_head">
+
+                    <div class="icon">
+                        <i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 style="padding-left:5px"> Placement Info</h2>
+                    </div>
+                    
+                </div>
+                
+                <div class="place_june_14">
+
+                    <div class="img">
+                        <div class="mnth">June</div>
+                        <div class="date">14</div>
+                    </div>
+                    <div class="content">
+                        <a href=""> Ms. J Krishna Priya from CSE Department got selected in BNY Mellon Technology with 22 LPA</a>
+                    </div>
+
+                </div>
+
+                <div class="place_may_17">
+
+                    <div class="img">
+                        <div class="mnth">May</div>
+                        <div class="date">17</div>
+                    </div>
+                    <div class="content">
+                        <a href=""> Mr. Balla Prema T and Ms. G Shaik Shabina have been selected as Trainee - System Engineer, at ATMECS with 3.25 LPA.</a>
+                    </div>
+                    
+                </div>
+
+                <div class="place_may_15">
+
+                    <div class="img">
+                        <div class="mnth">May</div>
+                        <div class="date">15</div>
+                    </div>
+                    <div class="content">
+                        <a href=""> Ui-Path Educator Development Program is going to start from today.</a>
+                    </div>
+                    
+                </div>
+
+                <div class="place_may_02">
+
+                    <div class="img">
+                        <div class="mnth">May</div>
+                        <div class="date">02</div>
+                    </div>
+                    <div class="content">
+                        <a href=""> CRT for Final Year Students is scheduled start from 22 May 2023</a>
+                    </div>
+                    
+                </div>
+
+                <div class="place_apr_25">
+
+                    <div class="img">
+                        <div class="mnth">Apr</div>
+                        <div class="date">25</div>
+                    </div>
+                    <div class="content">
+                        <a href=""> 259 students got qualified in EPAM assessment Round 1.</a>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="final">
+
+            <div class="final_left">
+
+                <div class="otot">
+
+                    <h1 style="font-size:3em"> 1312 </h1>
+                    <p style="line-height: 1.6;"> Job offers achieved by our students for the Academic Year 2021-22</p>
+
+                </div>
+
+                <div class="sister">
+                    <img src="sister.jpg" width="100%" height="100%" alt="Student">
+
+                    <div class="sister_hide">
+                        <div class="plus">
+                            <div class=plus_border >
+                                <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="sisters">
+                    <img src="sisters.jpg" width="100%" height="100%" alt="Student">
+
+                    <div class="sisters_hide">
+                        <div class="plus1">
+                            <div class=plus1_border >
+                                <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="zo">
+                    <h1 style="font-size:3em"> 01 </h1>
+                    <p style="letter-spacing: 0px; line-height: 1.6;">VVIT is the one and only college to achieve NAAC and NBA with in 10 years of inception. Also its the first college to host Google's Codelab in India.</p>
+                </div>
+
+            </div>
+
+
+            <div class="stories_of_success">
+                <div style="text-align:center; padding-bottom:8%;">
+                    <h2 style="color:4c4c4c; padding-bottom:3%"> Stories of Success</h2>
+                    <img style="border-radius: 50%;" src="succes_storyimage.jpg" width="100px" height="100px" alt="succes story">
+                </div>
+                <div style="margin-left:10%; ">
+                    <h3 style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> Success is not an accident</h3>
+                    <p style="color:#7a746a ; line-height: 1.6;">Success comes not as an accident but by the result of hardwork, discipline and proper application of skills. Here are such stories of VVITians who tasted success.</p>
+                </div>
+                <div class="link" style="position:relative; margin-left:10%;margin-top:5%;">
+                    <a href="" style="text-decoration:none">
+                        <h5 style="color:#7a746a; text-transform:uppercase"> Read more stories about success</h5>
+                        <div style="display:flex; justify-content: center; align-items: center; position:absolute; left:90%; top:35%; color:#7a746a">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="you_are_here">
+            YOU ARE HERE:   HOME
+            <div class="edge">
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3 style="color:white; font-family:Helvetica, sans-serif; padding-top:3%; padding-left:2%; padding-bottom: 1%;"> Route Map</h3>
+            
+            <div class="map">
+                <iframe style="width:100%;"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5904.489219899268!2d80.52018588250583!3d16.344003668121594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f5c460ab7d1d%3A0x8c86e4f36490336b!2sVasireddy%20Venkatadri%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1690999514284!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <h3 style="color:white; letter-spacing:0.8px;"> Address and Phone</h3>
+
+            <div class="address">
+                <div class="foot_icon">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </div>
+                <div class="loc">
+                    <h6> Vasireddy Venkatadri Institute of Technology</h6>
+                    <h6> Nambur (V)</h6>
+                    <h6> Peda Kakani (Md)</h6>
+                    <h6> Andhra Pradesh</h6>
+                    <h6> 522508</h6>
+                </div>      
+            </div>
+
+            <div class="phone">
+                <div class="foot_icon">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="num" style="line-height:1">
+                    <h3> 9951 023 336</h3>
+                    <h3> 9849 542 336</h3>
+                    <h3> 9849 549 336</h3>
+                </div>
+            </div>
+
+            <div class="mail">
+                <div class="foot_icon">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </div>
+                <div class="principal_mail">
+                    <h3>principaloffice@vvit.net</h3>
+                </div>
+            </div>
+            <div class="Copyright">
+                Copyright © 2023. VVIT. Designed by Shape5.com Joomla Templates
+            </div>
+        </div>
+
+        
+
+
+        <script>
+            $(document).ready(function(){
+                $(".again").hover(function(){
+                    $(".abt_drp").slideToggle(150);
+                });
+                $(".again1").hover(function(){
+                    $(".adm_drp").slideToggle(150);
+                });
+                $(".again3").hover(function(){
+                    $(".dep_drp").slideToggle(150);
+                });
+                $(".again4").hover(function(){
+                    $(".camp_drp").slideToggle(150);
+                });
+                $(".again5").hover(function(){
+                    $(".sec_big").slideToggle(150);
+                });
+                $(".again6").hover(function(){
+                    $(".exam_drp").slideToggle(150);
+                });
+                $(".again7").hover(function(){
+                    $(".third_big").slideToggle(150);
+                });
+                $("body").hover(function(){
+                    $(".abs h1").fadeIn(2000);
+                });
+                $(".committees").hover(function(){
+                    $(".committees_right").fadeToggle(600);
+                });
+                $(".statuatory_committees").hover(function(){
+                    $(".statuatory_committees_right").fadeToggle(600);
+                });
+                $(".governing_body").hover(function(){
+                    $(".governing_body_left").fadeToggle(600);
+                });
+                $(".board_of_studies").hover(function(){
+                    $(".board_of_studies_left_container").fadeToggle(600);
+                });
+                $(".cse_aiml").hover(function(){
+                    $(".cse_aiml_right").fadeToggle(600);
+                });
+                $(".r20_cse_aiml").hover(function(){
+                    $(".r20_cse_aiml_left").fadeToggle(600);
+                });
+                $(".aids").hover(function(){
+                    $(".aids_right").fadeToggle(600);
+                });
+                $(".bos_minutes").hover(function(){
+                    $(".bos_minutes_left").fadeToggle(600);
+                });
+                $(".aiml").hover(function(){
+                    $(".aiml_right").fadeToggle(600);
+                });
+                $(".cse_iot").hover(function(){
+                    $(".cse_iot_right").fadeToggle(600);
+                });
+                $(".s_and_h").hover(function(){
+                    $(".s_and_h_left").fadeToggle(600);
+                });
+                $(".r_and_d").hover(function(){
+                    $(".r_and_d_left").fadeToggle(600);
+                });
+                $(".sac").hover(function(){
+                    $(".sac_right").fadeToggle(600);
+                });
+                $(".discipline").hover(function(){
+                    $(".discipline_left").fadeToggle(600);
+                });
+                $(".clubs").hover(function(){
+                    $(".clubs_left_container").fadeToggle(600);
+                });
+                $(".ncc").hover(function(){
+                    $(".ncc_right").fadeToggle(600);
+                });
+                $(".nss").hover(function(){
+                    $(".nss_right").fadeToggle(600);
+                });
+                $(".sports").hover(function(){
+                    $(".sports_right").fadeToggle(600);
+                });
+                $(".internships").hover(function(){
+                    $(".internships_right").fadeToggle(600);
+                });
+                $(".latest_results").hover(function(){
+                    $(".latest_results_left").fadeToggle(600);
+                });
+                $(".pre_questions").hover(function(){
+                    $(".pre_questions_left").fadeToggle(600);
+                });
+                $(".R19_pre_questions").hover(function(){
+                    $(".R19_pre_questions_left").fadeToggle(600);
+                });
+                $(".i_and_edc").hover(function(){
+                    $(".i_and_edc_right").fadeToggle(600);
+                });
+                $(".mhrd_iic").hover(function(){
+                    $(".mhrd_iic_left_container").fadeToggle(600);
+                });
+                $(".startup_policy").hover(function(){
+                    $(".startup_policy_right").fadeToggle(600);
+                });
+                $(".uni_innovation_fellows").hover(function(){
+                    $(".uni_innovation_fellows_right").fadeToggle(600);
+                });
+                $(".sister").hover(function(){
+                    $(".sister_hide").fadeToggle(800);
+                });
+                $(".sisters").hover(function(){
+                    $(".sisters_hide").fadeToggle(800);
+                });
+            })
+        </script>
+
+    </body>
+
+</html>
